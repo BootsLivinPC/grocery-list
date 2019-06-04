@@ -1,7 +1,7 @@
 import React from 'react';
 import List from './List';
 import TodoForm from './TodoForm';
-
+import {Container, } from 'semantic-ui-react'
 
 
 class App extends React.Component {
@@ -45,10 +45,11 @@ handleClick = (id) => {
 
  render() {
    return (
-     <div className="App">
+     <Container >
+      <List  name="Grocery List" items={this.state.todos} todoClick={this.handleClick} />
+      <br />
       <TodoForm addItem={this.addItem} />
-      <List name="Grocery List" items={this.state.todos} todoClick={this.handleClick} />
-    </div>
+    </Container>
    );
  }
   

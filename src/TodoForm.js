@@ -1,4 +1,6 @@
 import React from 'react';
+import {Form, } from 'semantic-ui-react'
+
 
 class TodoForm extends React.Component {
  constructor(props) {
@@ -22,14 +24,14 @@ class TodoForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <input 
+      <Form onSubmit={this.handleSubmit}>
+        <Form.Input
         required 
         value={this.state.name}
         name="name"
         onChange={this.handleChange}
         placeholder="Add To Grocery List" />
-      </form>
+      </Form>
     )
   }
 }
